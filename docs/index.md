@@ -1,6 +1,6 @@
 ---
 hero:
-  title: library
+  title: 123
   description: wait
   actions:
     - text: Hello
@@ -18,5 +18,3 @@ features:
     emoji: 🚀
     description: Put ! description here
 ---
-
-rick-public-lib
