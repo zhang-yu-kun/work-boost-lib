@@ -10,9 +10,9 @@
 
 ## 代码演示
 
-### 基本用法
+### 基础用法
 
-```tsx
+```jsx
 import { PubTitle } from 'work-boost';
 
 export default () => <PubTitle text="测试" />;
@@ -20,7 +20,7 @@ export default () => <PubTitle text="测试" />;
 
 ### 不同大小
 
-```tsx
+```jsx
 import { PubTitle } from 'work-boost';
 
 export default () => <PubTitle size="l" text="测试" />;

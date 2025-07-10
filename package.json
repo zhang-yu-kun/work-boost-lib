@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "antd": "^5.26.4",
-    "work-boost": "^0.2.3"
+    "work-boost": "^0.2.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

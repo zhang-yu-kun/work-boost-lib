@@ -6,16 +6,16 @@
 
 ## 代码演示
 
-### 基本用法
+### 基础用法
 
-```tsx
+```jsx
 import { PubSearch } from 'work-boost';
 import { Form, Input } from 'antd';
 
 export default () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values) => {
     console.log(values);
   };
 
@@ -31,7 +31,7 @@ export default () => {
 
 ### 展开收起
 
-```tsx
+```jsx
 import { PubSearch } from 'work-boost';
 import { Form, Input } from 'antd';
 
@@ -46,7 +46,7 @@ export default () => {
     return options;
   };
 
-  const onFinish = (values: any) => {};
+  const onFinish = (values) => {};
   return (
     <PubSearch
       form={form}
@@ -67,12 +67,16 @@ export default () => {
 | onFinish | 表单提交的方法                           | `()=>void`     |         |      |
 | collapse | 是否展开折叠                             | `boolean`      | `false` |      |
 
-### OptionItemIF
+### type
 
-| 名称      | 说明           | 类型                 |
-| --------- | -------------- | -------------------- |
-| isFlex    | 是否为灵活组件 | `boolean`            |
-| label     | 表单项的标签名 | `string`             |
-| field     | 表单项的标签名 | `string`             |
-| rules     | 规则           | 与 antd 中的一致     |
-| component | 表单项的标签名 | `React.ReactElement` |
+| 类型         | 名称       | 说明                           | 类型               |
+| ------------ | ---------- | ------------------------------ | ------------------ |
+| OptionItemIF | component  | 输入组件，Input，Select 等组件 | ` React.ReactNode` |
+|              | isFlex     | 是否为灵活组件                 | `boolean`          |
+|              | label      | 表单项标签名称                 | `string`           |
+|              | field      | 表单项字段名称                 | `string`           |
+|              | rules      | 规则                           | 与 antd 中的一致   |
+|              | labelCol   | 标签分布距离                   | `string`           |
+|              | wrapperCol | 组件分布距离                   | `string`           |
+
+_灵活组件可传递其他组件，如果值需要被 Form 监听到，需要被`Form.Item`包裹_

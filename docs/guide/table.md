@@ -6,9 +6,9 @@
 
 ## 代码演示
 
-### 基本用法
+### 基础用法
 
-```tsx
+```jsx
 import { PubTable } from 'work-boost';
 import { Button } from 'antd';
 const data = [
@@ -50,7 +50,10 @@ export default () => {
       data={data}
       columns={columns}
       pageOption={{ isAuto: true }}
-      header={{ tableTitle: '搜索列表', HeaderRender: handeRender() }}
+      header={{
+        tableTitle: '搜索列表',
+        HeaderRender: [{ text: '测试', type: 'primary' }],
+      }}
     />
   );
 };
@@ -58,9 +61,9 @@ export default () => {
 
 ## 头部可选
 
-如果需要小型表单，可以隐藏 header 部分。size 属性与 antd 一致。
+header 部分支持隐藏。如果需要小型表单，size 属性建议使用 small 此字段与 antd 一致。
 
-```tsx
+```jsx
 import { PubTable } from 'work-boost';
 const data = [
   {
@@ -108,7 +111,7 @@ export default () => (
 
 work-boost 提供了多选操作的封装,能更容易理解多选操作。
 
-```tsx
+```jsx
 import { PubTable } from 'work-boost';
 import { useState } from 'react';
 const data = [
@@ -170,18 +173,22 @@ export default () => {
 | columns    | 与 antd 一致       | `ColumnsType[]`   |         |      |
 | pageOption | 分页参数           | ` PageIF``false ` |         |      |
 | rowOption  | 多选参数           | `RowIF`           | `false` |      |
+| header     | 头部参数           | `HeaderIF`        |         |      |
 
 ### type
 
-| 类型       | 名称              | 说明                              | 类型      |
-| ---------- | ----------------- | --------------------------------- | --------- |
-| pageOption | false             | 无任何分页                        | `boolean` |
-|            | isAuto            | antd 自动分页                     | `boolean` |
-|            | current           | 当前页码                          | `number`  |
-|            | pageSize          | 每页数量                          | `number`  |
-|            | total             | 总条数                            | `number`  |
-| rowOption  | isSelect          | 是否有选择框                      | `number`  |
-|            | rowKey            | 键                                | `number`  |
-|            | rowSelects        | 已选择的 key 值                   | `number`  |
-|            | setRowSelects     | 设置 key 值                       | `number`  |
-|            | setRowSelectsInfo | 设置 key 值的信息，获取当前行信息 | `number`  |
+| 类型       | 名称              | 说明                                    | 类型      |
+| ---------- | ----------------- | --------------------------------------- | --------- |
+| pageOption | false             | 无任何分页                              | `boolean` |
+|            | isAuto            | antd 自动分页                           | `boolean` |
+|            | current           | 当前页码                                | `number`  |
+|            | pageSize          | 每页数量                                | `number`  |
+|            | total             | 总条数                                  | `number`  |
+| rowOption  | isSelect          | 是否有选择框                            | `number`  |
+|            | rowKey            | 键                                      | `number`  |
+|            | rowSelects        | 已选择的 key 值                         | `number`  |
+|            | setRowSelects     | 设置 key 值                             | `number`  |
+|            | setRowSelectsInfo | 设置 key 值的信息，获取当前行信息       | `number`  |
+| HeaderIF   | isShow            | 是否展示头部，默认展示                  | `boolean` |
+|            | tableTitle        | 头部标题                                | `string`  |
+|            | HeaderRender      | button 数组，用于渲染 header 右侧的按钮 |           |
