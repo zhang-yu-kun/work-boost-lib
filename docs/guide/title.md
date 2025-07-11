@@ -1,6 +1,12 @@
+---
+group:
+  title: 组件
+  order: 1
+---
+
 # 标题组件
 
-## 何时使用
+## PubTitle-组件介绍
 
 如果你在开发一个页面的时候需要为下方的内容设置一个标题，可以使用此组件。
 
@@ -23,7 +29,7 @@ export default () => <PubTitle text="测试" />;
 ```jsx
 import { PubTitle } from 'work-boost';
 
-export default () => <PubTitle size="l" text="测试" />;
+export default () => <PubTitle size="middle" text="测试" />;
 ```
 
 ## API

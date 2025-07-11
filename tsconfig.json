@@ -8,8 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "rick-public-lib": ["src"],
-      "rick-public-lib/*": ["src/*", "*"]
+      "components": ["src"],
+      "components/*": ["src/*", "*"]
     }
   },
   "include": [".dumirc.ts", "src/**/*"]

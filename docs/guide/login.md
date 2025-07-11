@@ -1,6 +1,12 @@
+---
+group:
+  title: 组件
+  order: 7
+---
+
 # 登录组件
 
-## 何时使用
+## PubLoginForm-组件介绍
 
 当你需要一个登录表单界面时。work-boost 能帮你快速搭建一个登录注册的表单
 
